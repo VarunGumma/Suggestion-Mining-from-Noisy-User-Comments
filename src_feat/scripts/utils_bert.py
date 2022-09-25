@@ -1,5 +1,5 @@
 # import statements
-from transformers import RobertaTokenizerFast, BertTokenizerFast, BartTokenizerFast
+from transformers import RobertaTokenizerFast, BertTokenizerFast
 import pandas as pd
 from ast import literal_eval
 
@@ -22,8 +22,6 @@ def get_encoded_input(fname, tag2idx=None, tokenizer_name="roberta-base", return
         tokenizer = RobertaTokenizerFast.from_pretrained("roberta-base", do_lower_case=True, add_prefix_space=True)
     elif tokenizer_name == "bert-base-uncased":
         tokenizer = BertTokenizerFast.from_pretrained("bert-base-uncased", do_lower_case=True)
-    elif tokenizer_name == "facebook/bart-base":
-        tokenizer = BartTokenizerFast.from_pretrained("facebook/bart-base", do_lower_case=True, add_prefix_space=True)
 
     # read the data and decode it
     data = pd.read_csv(fname,
