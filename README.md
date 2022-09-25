@@ -8,4 +8,4 @@ Saved weights for all the models that were trained can be found [here](https://d
 
 Make sure to remove the ```[src_feat]``` and ```[src_sug]``` from the names after copying.
 
-It is recommended to run all the code on a good GPU, preferrably with the ```amp_backend``` set as [apex](https://github.com/NVIDIA/apex) for more efficient computations.
+It is recommended to run all the code on a good GPU, preferrably with the ```amp_backend``` set as [apex](https://github.com/NVIDIA/apex) for more efficient computations. In case ```apex``` is not installed in your system, you remove the line ```amp_backend="apex"``` from the ```pl.Trainer``` class constructor.
